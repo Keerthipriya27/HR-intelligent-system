@@ -1,73 +1,70 @@
-# React + TypeScript + Vite
+💼 HR Cost Intelligence Engine
+Overview
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+HR Cost Intelligence Engine is an AI-powered analytics platform that helps organizations understand how employee time translates into project costs. Instead of simply tracking payroll, the platform automatically analyzes calendar activities, attributes meetings to projects, and provides real-time insights into workforce utilization and HR expenditure.
 
-Currently, two official plugins are available:
+The platform enables HR teams, managers, and finance departments to make data-driven decisions through interactive dashboards, AI-powered analytics, and secure role-based access.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Features
+🤖 AI-powered project attribution based on meeting details
+📊 Real-time HR cost and workforce analytics dashboard
+📅 Google Calendar and Outlook integration
+👥 Employee utilization and workload analysis
+🚨 AI-based anomaly detection for unusual spending patterns
+💰 HR cost estimation for projects and teams
+🔐 Secure authentication with role-based access control (RBAC)
+🎨 Modern, responsive enterprise dashboard with glassmorphism UI
+Tech Stack
+Frontend
+React
+TypeScript
+Vite
+Tailwind CSS
+Framer Motion
+Backend
+Supabase
+PostgreSQL
+Authentication
+Edge Functions
+AI & Analytics
+AI Project Attribution
+Workforce Analytics
+Cost Intelligence
+Real-Time Data Processing
+How It Works
+Connect Google Calendar or Outlook.
+The platform automatically imports meeting information.
+AI analyzes meeting titles, attendees, and descriptions to identify the related project.
+Employee costs are calculated based on meeting participation.
+Interactive dashboards display project costs, employee utilization, spending trends, and anomalies in real time.
+Project Structure
+HR-Cost-Intelligence/
+│
+├── src/
+├── public/
+├── supabase/
+├── components/
+├── pages/
+├── package.json
+├── vite.config.ts
+└── README.md
+Installation
 
-## React Compiler
+Clone the repository:
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+git clone <repository-url>
 
-## Expanding the ESLint configuration
+Install dependencies:
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+npm install
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+Run the development server:
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+npm run dev
+Future Enhancements
+Predictive HR cost forecasting
+Department-wise analytics
+AI-powered resource planning
+Export reports to PDF and Excel
+Microsoft Teams and Slack integration
+Multi-organization support
