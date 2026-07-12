@@ -220,7 +220,3 @@ npm run dev
 - Multi-organization support
 
 ---
-
-# 👨‍💻 Developed By
-
-Built with ❤️ using React, TypeScript, Supabase, and AI to help organizations transform employee activity into meaningful business intelligence.
